@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Comatiable" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+        <style>
+          
+* {
+    margin: 0;
+    padding: 0;
+    font-family:"Noto Sans JP",sans-serif;
+    outline:none;
+    box-sizing:border-box;
+}
+body{
+    width:100%;
+    height:auto;
+    color:rgb(19, 17, 16); 
+}
+p{
+    font-size:fixed;
+}
+.label-cart{    
+    top:15;
+    right:10;
+    z-index:4;
+    cursor:pointer;
+}
+.heading{
+    position:fixed;
+    background-color:black;
+    color:orangered;
+    width:100%;
+    text-align:center;
+    padding:15px 420px 15px 60px;
+    top:0;
+    z-index:2;
+}
+.leftside{
+    position:fixed;
+    top:0;
+    left:0;
+    width:90px;
+    height:100%;
+    background-color:rgb(52, 50, 50);
+    z-index:1;
+    padding-top:70px;
+}
+.leftside-menu{
+    width:100%;
+    text-align:center;
+    padding:10px 5px;
+    color:rgb(241, 239, 239);
+}
+/* icon color */
+.leftside-menu > a {
+    text-decoration: none;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    color:rgb(233, 223, 223);
+}
+/* icon cursor */
+.leftside-menu:hover{
+    border-right: 2px solid var(--yellow);
+    color:rgb(239, 237, 237);
+}
+.leftside-menu:hover{
+    background-color: orangered;
+}
+.middle{
+    height:100%;
+    width:100%;
+    padding-right: 360px;
+    padding-left: 60px;
+}
+.middle-banner {
+    width:100%;
+    height:300px;
+    position:relative;
+    margin-top: 4rem;
+    padding: 1rem;
+    border-radius: 30px;
+    cursor:pointer;       
+}
+.middle-banner > img{
+    width:90%;
+    height:120%;
+    object-fit: cover;
+    border-radius: 30px;
+    padding-left: 30px;
+    border-radius: 30px;
+}
+.banner-text{
+    position:absolute;
+    color:rgb(245, 242, 238);
+    top:25%;
+    left:10%;
+    font-weight:800;
+    padding-left:-5px;
+}
+.banner-text > h1 > span{
+    color:darkorange;
+
+}
+.order{
+  background-color:darkorange;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.title1{
+    padding:20 1rem;
+    padding-top: 50px;
+    position:absolute;
+    top:50%;
+    left:10%;
+    font-weight:700;
+    padding-left:-5px;
+}
+.items{
+    padding:20 1rem;
+    padding-top: 80px;
+    position:absolute;
+    top:50%;
+    left:10%;
+    font-weight:400;
+    padding-left:-5px;
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+}
+.items > a {
+    text-decoration:none;
+    text-align:center;
+    border-radius:20px;
+    min-width:120px;
+    padding:0.5rem 0;
+    font-size:0.9rem;
+    color:whitesmoke;
+    background-color:darkorange;
+}
+.items > a:hover{
+    background-color: black;
+    color:whitesmoke;
+}
+.food .items{
+    display:flex;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:0.5rem 1rem 1rem 1rem;
+}
+.food menu{
+    background-color:darkgrey;
+    box-shadow:rgb(213, 208, 208);
+    border-radius: 15px;
+    position:relative;
+    cursor: pointer;
+}
+.food menu:hover{
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+
+
+}
+.image1{
+    width:10%;
+    height:150px;
+    object-fit: cover;
+    border-radius: 15px;
+    padding:0.5rem 0;
+    margin: auto;
+    position:absolute
+}
+.food menu: hover{
+    box-shadow:black;
+}
+.details1{
+    padding:10px;
+}
+.details1 > h4 > span{
+    float:left;
+}
+.time1{
+    color:black;
+    font-size: 0.8rem;
+    padding-top: 10px;
+}
+
+
+        </style>
+
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" real="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <title>ISTHARA</title>
+    </head>
+    <body>
+        <!--header-->
+        <input type="checkbox" id="cart">
+        <label for="cart" class="label-cart"><span class="fas fa-shopping-cart"></span></label>
+        <h3 class="heading">MALLAREDDY UNIVERSITY</h3>
+
+        <!--leftside-->
+        <div class="leftside">
+            <div class="leftside-menu">
+                <i class="fas fa-search"></i>
+                <a href="#">Search</a>
+            </div>
+            <div class="leftside-menu">
+                <i class="fas fa-home"></i>
+                <a href="#">home</a>
+            </div>
+            <div class="leftside-menu">
+                <span class="fas fa-heart"></span>
+                <a href="#">favorite</a>
+            </div>
+             <div class="leftside-menu">
+                 <span class="fas fa-sliders-h"></span>
+                <a href="#">setting</a>
+             </div>
+             <div class="leftside-menu">
+                 <span class="fas fa-user"></span>
+                 <a href="#">account</a>
+            </div>
+        </div>
+        <!--middle-->
+        <div class="middle">
+            <div class="middle-banner">
+                <img src="https://pancan.org/wp-content/uploads/2019/09/hamburger-733x450.jpg">
+                <div class="banner-text">
+                <h1>ENJOY ON YOUR ORDERS!!</h1>
+                <h1>GET <span>50%</span>off*</h1> 
+                 on your flavoursome delights <br><br><br>
+                <div class="order">
+                <h5>ORDER NOW</h5>
+                </div>
+                </div>
+                </div>
+            </div>
+            <h3 class="title1">Rccommend Food items For You</h3>
+            <div class="items">
+                <a herf="#">Top Rating</a>
+                <a herf="#">Best Sellers</a>
+                <a herf="#">Recommend</a>
+                <a herf="#">Fastest</a>
+                <a herf="#">Favourites</a>
+                <a herf="#">All</a>
+            </div>
+            <div class="food itmes">
+                <div class="food menu">
+                    <img class="image1" src="ice cream.jpg">
+                    <div class="details1">
+                        <h4>Biriyani at<span>$150</span></h4>
+                        <p> best tasty food</p>
+                        <p class="time1"><span class="fas fa-clock"></span></p>
+                    </div>
+                </div>
+                <div class="food itmes">
+                    <div class="food menu">
+                        <img class="image1" src="ice cream.jpg">
+                        <div class="details1">
+                            <h4>Biriyani at<span>$150</span></h4>
+                            <p> best tasty food</p>
+                            <p class="time1"><span class="fas fa-clock"></span></p>
+                        </div>
+                    </div>
+                    <div class="food itmes">
+                        <div class="food menu">
+                            <img class="image1" src="ice cream.jpg">
+                            <div class="details1">
+                                <h4>Biriyani at<span>$150</span></h4>
+                                <p> best tasty food</p>
+                                <p class="time1"><span class="fas fa-clock"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--right-->
+        
+    </body>
+</html>       
